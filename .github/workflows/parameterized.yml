@@ -1,11 +1,12 @@
 name: Manual Input Workflow
 
-on: [push]
-    inputs:
-      name:
-        description: 'Person to greet'
-        required: true
-        default: 'World'
+on:
+    push:
+        inputs:
+          name:
+            description: 'Person to greet'
+            required: true
+            default: 'World'
 
 jobs:
   greet:
