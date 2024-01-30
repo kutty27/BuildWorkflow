@@ -1,7 +1,7 @@
 name: Manual Input Workflow
 
 on:
-    push:
+    workflow_dispatch:
         inputs:
           name:
             description: 'Person to greet'
