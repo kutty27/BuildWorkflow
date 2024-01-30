@@ -8,6 +8,7 @@ on:
 env:
   JAVA_VERSION: '17'
   COMPILE_COMMAND: 'javac *.java'
+  RUN_COMMAND: 'java Main'
 
 jobs:
   build-and-run:
@@ -27,4 +28,4 @@ jobs:
         run: ${{ env.COMPILE_COMMAND }}
 
       - name: Run Main file
-        run: java Main
+        run: ${{ env.RUN_COMMAND }}
