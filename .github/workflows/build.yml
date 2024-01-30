@@ -1,4 +1,4 @@
-name: Java CI
+name: Java Build
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-run:
 
     runs-on: ubuntu-latest
 
@@ -20,7 +20,13 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
 
-    - name: Compile and Run Java program
-      run: |
-        javac *.java
-        java Main
+    # - name: Compile and Run Java program
+    #   run: |
+    #     javac *.java
+    #     java Main
+
+    - name: Compile All files
+      run: javac *.java
+
+    - name: Run Main file
+      run: java Main
