@@ -1,0 +1,26 @@
+name: Matrix workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Matrix-Startegy:
+    strategy:
+      matrix:
+        compile-files: ['Vehicle.java', 'Car.java', 'Bike.java']
+      runs-on: ubuntu-latest
+      steps:
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '17'
+
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Compile files
+        run: javac ${{matrix.compile-files}}
+        
