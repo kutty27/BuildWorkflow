@@ -1,0 +1,8 @@
+name: Main Workflow
+
+on: [push]
+
+jobs:
+  call-workflow-using-branch:
+    uses: kutty27/SampleWorkflow/.github/workflows/build.yml@main
+    
