@@ -1,0 +1,16 @@
+name: Repository dispatch event
+on:
+  workflow_dispatch
+
+jobs:
+  Trigger-another-repository-workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Sample workflow repository
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${secrets.REPO_ACCESS_TOKEN}
+          repository: kutty27/SampleWorkflow
+          event-type: my-event
+    
