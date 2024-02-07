@@ -10,7 +10,7 @@ jobs:
       - name: Trigger Sample workflow repository
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${secrets.REPO_ACCESS_TOKEN}
+          token: ${{ secrets.TARGET_REPO_ACCESS_TOKEN }}
           repository: kutty27/SampleWorkflow
           event-type: my-event
     
