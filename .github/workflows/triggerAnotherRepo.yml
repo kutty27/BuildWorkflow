@@ -1,7 +1,7 @@
 name: Trigger Workflow
 
 on:
-  workflow-dispatch
+  workflow_dispatch
 
 jobs:
   trigger-workflow:
