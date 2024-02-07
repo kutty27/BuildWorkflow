@@ -1,4 +1,4 @@
-name: Trigger Workflow
+name: Trigger Workflow from one repo to another repo
 
 on:
   workflow_dispatch
