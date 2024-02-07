@@ -26,7 +26,7 @@ jobs:
         uses: ./.github/workflows/reusable1.yml
         with:
           job: Compile
-          steps: 3
+          steps: 1,2,3
 
       - name: Run java file
         run: java Main
