@@ -1,0 +1,17 @@
+name: Trigger Workflow
+
+on:
+  workflow-dispatch
+
+jobs:
+  trigger-workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger workflow in target repository
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          token: ${{ secrets.TARGET_REPO_ACCESS_TOKEN }}
+          repository: kutty27/SampleWorkflow
+          workflow: main.yml
+          ref: main
