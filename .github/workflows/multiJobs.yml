@@ -1,0 +1,22 @@
+name: My Workflow
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run a command
+      run: echo "Building the application"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run a command
+      run: echo "Testing the application"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run a command
+      run: echo "Deploying the application"
