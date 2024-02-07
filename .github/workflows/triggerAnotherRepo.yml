@@ -12,6 +12,6 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1
         with:
           token: ${{ secrets.TARGET_REPO_ACCESS_TOKEN }}
-          repository: kutty27/SampleWorkflow
+          repo: kutty27/SampleWorkflow
           workflow: main.yml
           ref: main
