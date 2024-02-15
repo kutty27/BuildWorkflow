@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger Sample workflow repository
+      - name: Trigger workflow in target repository
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.TARGET_REPO_ACCESS_TOKEN }}
