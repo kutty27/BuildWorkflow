@@ -1,0 +1,23 @@
+name: Example Workflow
+
+on: [push, pull_request]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run command 1
+        run: echo "Running command 1"
+
+  job2:
+    runs-on: ubuntu-latest
+    needs: [job1, job3]
+    steps:
+      - name: Run command 2
+        run: echo "Running command 2"
+
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run command 3
+        run: echo "Running command 3"
