@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run command 1
-        run: echo "Running command 1"1
+        run: echo "Running command 1
 
   job2:
     runs-on: ubuntu-latest
